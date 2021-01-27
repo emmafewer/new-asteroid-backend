@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_162831) do
   end
 
   create_table "levels", force: :cascade do |t|
-    t.string "level"
+    t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

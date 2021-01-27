@@ -6,14 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Game.delete_all
+User.delete_all
+Level.delete_all
+
+
+
 u1 = User.create(name: "Emma")
 u2 = User.create(name: "Riley")
 
-l1 = Level.create(level: "beginner")
-l2 = Level.create(level: "intermediate")
-l3 = Level.create(level: "hard")
+l1 = Level.create(level: "1")
+
 
 Game.create(score: 100, level_id: l1.id, user_id: u1.id)
 Game.create(score: 300, level_id: l1.id, user_id: u1.id)
 Game.create(score: 400, level_id: l1.id, user_id: u2.id)
-Game.create(score: 200, level_id: l2.id, user_id: u2.id)
+Game.create(score: 200, level_id: l1.id, user_id: u2.id)
