@@ -5,14 +5,7 @@ class LevelsController < ApplicationController
     end
 
     def create
-        user = User.find(params["id"])
-
-        if user.games == []
-            level = Level.find_by(level: Level.first.level)
-        else
-            level = Level.find_by(level: user.games.last.level.level)
-        end
-
+        level = Level.find_by(level: Level.first.level)
         render :json => level
     end
 end
