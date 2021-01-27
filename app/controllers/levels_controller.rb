@@ -5,7 +5,7 @@ class LevelsController < ApplicationController
     end
 
     def create
-        level = Level.find_by(level: Level.first.level)
+        level = Level.find_or_create_by(level: params['level'])
         render :json => level
     end
 end
