@@ -8,4 +8,9 @@ class GamesController < ApplicationController
         game = Game.create(score: params['score'], user_id: params['user_id'], level_id: params['level_id'])
         render :json => game
     end
+
+    def destroy
+        game = Game.find(params[:id])
+        game.destroy
+    end
 end
