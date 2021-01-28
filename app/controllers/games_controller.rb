@@ -5,7 +5,7 @@ class GamesController < ApplicationController
     end
 
     def create
-        game = Game.create(score: params['score'], user_id: User.last.id, level_id: params['level_id'])
+        game = Game.create(score: params['score'], user_id: params['user_id'], level_id: params['level_id'])
         render :json => game
     end
 
