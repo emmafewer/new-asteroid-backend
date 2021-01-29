@@ -1,24 +1,10 @@
-# README
+# Asteroid Game Backend!!!
+This is the backend for our asteroid game clone. This contains the database that holds user, game, and level information. To do this we used Ruby on Rails as an API, so it renders all of our data as a JSON at specific routes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The frontend makes multiple fetch requests to this API, then sends and recieves user data like username, associated games and their scores, and levels.
 
-Things you may want to cover:
+Our model relationships are that users has many games, game belongs to a user and to a level, and a level has many games.
 
-* Ruby version
+you can find our frontend [here](https://github.com/Rmiverson/astroid-game-frontend/tree/readme-edit)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This was developed by Emma Fewer and Riley Iverson
