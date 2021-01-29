@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.name = params[:name]
+        user.update(name: params[:name])
         render :json => user
     end
 end
